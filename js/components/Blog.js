@@ -33,6 +33,8 @@ class Blog {
     }
 
     render() {
+
+      
         let HTML = '';
         
 
@@ -54,12 +56,13 @@ class Blog {
                 HTML += `<div class="post col-4">
                             
                             <div class="video">
+                            <img src="../img/blog/blog-2.jpg" class="postmedia">
                             <i class="fa fa-play-circle" aria-hidden="true"></i>
                             <div id="myModal" class="modal">
                                <div class="modal-content">
                                <span class="close">&times;</span>
                                <iframe src="https://player.vimeo.com/video/99025203?title=0&byline=0&portrait=0&badge=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                               </div>
+                            </div>
                           </div>
                       
                       </div>
@@ -72,35 +75,24 @@ class Blog {
                       </div>`;
                               
                     }
-            if(post.media.slideshow){
+            if (post.media.slideshow) {
                 HTML += `<div class="post col-4">
                             <div class="slideshow-container">
-                                <div class="mySlides fade">
-                                    <img src="../img/blog/${post.media.slideshow[0]}" style="width:100%">
-                                </div>
-                                <div class="mySlides fade">
-                                    <img src="../img/blog/${post.media.slideshow[1]}"" style="width:100%">
-                                </div>
-                                <div class="mySlides fade">
-                                    <img src="../img/blog/${post.media.slideshow[2]}"" style="width:100%">
-                                </div>
-                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                              </div>
-                              <br></br>
+                                
+                                    <img class="postmedia" src="../img/blog/${post.media.slideshow[0]}" style="width:100%">
+                                
+                            
+                         
                               
-                              <a href="#" class="title">${post.title}</a>
+                            <a href="#" class="title">${post.title}</a>
                             <a href="#" class="category">${post.category}</a>
                             <p class="date">${post.date} <a class="author">${post.author}</a></p>
                             <p class="description">${post.description}</p>
                             <a href="#" class="read-more">${post.readmore}</a>
-                            </div>`;
-
-
-
-
-                    }
+                        </div>`;
             }
+          }
+          
         
                 
                   
@@ -127,21 +119,41 @@ class Blog {
                         if (event.target == modal) {
                           modal.style.display = "none";
                         }
-                      }
-                      var slideIndex = 0;
-showSlides();
+                }
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none"; 
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1} 
-  slides[slideIndex-1].style.display = "block"; 
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+
+
+                      // var slideIndex = 1;
+                      // showDivs(slideIndex);
+                      
+                      // function plusDivs(n) {
+                      //   showDivs(slideIndex += n);
+                      // }
+                      
+                      // function showDivs(n) {
+                      //   var i;
+                      //   var x = document.getElementsByClassName("mySlides");
+                      //   if (n > x.length) {slideIndex = 1} 
+                      //   if (n < 1) {slideIndex = x.length} ;
+                      //   for (i = 0; i < x.length; i++) {
+                      //     x[i].style.display = "none"; 
+                      //   }
+                      //   x[slideIndex-1].style.display = "block"; 
+                      // }
+//                       var slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none"; 
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1} 
+//   slides[slideIndex-1].style.display = "block"; 
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
                     
                 })
             }
