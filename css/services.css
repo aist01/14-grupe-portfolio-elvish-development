@@ -27,19 +27,21 @@ grid-gap: 20px;
         color: rgb(31, 29, 29);
         text-align: center;
         font-size: 22px;
-        padding: 40px 0 0px;
+        padding: 60px 0 0px;
     }
     #services .col-4 p{
         width: 98%;
-       margin-top: 30px;
+       margin-top: 20px;
         text-align: center;
+        padding: 10px;
+        margin-bottom: 30px;
       
         /* background: yellowgreen; */
     }
 
         .servIcon  img{  
             align-self:  center;
-            margin-top: 30px;  
+            margin-top: 50px;  
             height: 100%;
             margin-right: auto;
             margin-left: auto;

@@ -32,9 +32,14 @@ form {
     width: 100%;
 }    
 
+.name-email {
+    display: inline-block;
+    width: 100%;
+}
+
     .name {
         display: inline-block;
-        width: 45%;
+        width: 44%;
         font-size: 18px;
         line-height: 20px;
         margin-top: 10px;
@@ -44,7 +49,7 @@ form {
 
     .email {
         display: inline-block;
-        width: 50%;
+        width: 47%;
         font-size: 18px;
         line-height: 20px;
         margin-top: 10px;
@@ -91,5 +96,15 @@ form {
             display: inline-block;
             float: right;
         }
+
+        @media (max-width: 768px)  {
+            .email {
+              width: 42%;
+              }
+            .name {
+                width: 42%;
+            }
+           
+          }
 
   
